@@ -1,0 +1,47 @@
+let username = "panos";
+
+username ? console.log(`Hello, ${username}!`) : console.log("Hello!");
+
+const userquestion = "";
+console.log(userquestion);
+
+let randomnumber = Math.floor(Math.random() * 8);
+
+let eightball = "";
+eightball = randomnumber;
+
+switch (eightball) {
+  case 0:
+    console.log(eightball);
+    console.log("It is decidedly so");
+    break;
+  case 1:
+    console.log(eightball);
+    console.log("Reply hazy try again");
+    break;
+  case 2:
+    console.log(eightball);
+    console.log("Cannot predict now");
+    break;
+  case 3:
+    console.log(eightball);
+    console.log("Do not count on it");
+    break;
+  case 4:
+    console.log(eightball);
+    console.log("My sources say no");
+    break;
+  case 5:
+    console.log(eightball);
+    console.log("Outlook not so good");
+    break;
+  case 6:
+    console.log(eightball);
+    console.log("Signs point to yes");
+    break;
+  case 7:
+    console.log(eightball);
+    console.log("ekanes tin tixi sou");
+    break;
+  default:
+}

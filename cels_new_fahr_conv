@@ -1,0 +1,21 @@
+// var of kelvin set to 293
+const kelvin = 293;
+
+//kelvin to celsius
+const celsius = kelvin - 273;
+
+//celsius to fahr
+let Fahrenheit = celsius * (9/5) + 32;
+
+//celsius to newton
+let newton = celsius * (33/100);
+
+//round  fahr
+Fahrenheit = Math.floor(Fahrenheit);
+
+//round  for newton
+newton = Math.floor(newton);
+
+
+console.log(`The temperature is ${Fahrenheit} degrees Fahrenheit.`);
+console.log(`The temperature is ${newton} degrees newton.`);
