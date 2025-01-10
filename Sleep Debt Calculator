@@ -1,0 +1,54 @@
+// Συνάρτηση για να επιστρέψει τις ώρες ύπνου για μια συγκεκριμένη ημέρα
+const getSleepHours = (day) => {
+  if (day === 'monday') {
+    return 8;
+  } else if (day === 'tuesday') {
+    return 7;
+  } else if (day === 'wednesday') {
+    return 6;
+  } else if (day === 'thursday') {
+    return 9;
+  } else if (day === 'friday') {
+    return 8;
+  } else if (day === 'saturday') {
+    return 10;
+  } else if (day === 'sunday') {
+    return 7;
+  } else {
+    console.log('Invalid day!');
+    return 0;
+  }
+};
+
+// Συνάρτηση για να υπολογίσει τις συνολικές ώρες ύπνου για την εβδομάδα
+const getActualSleepHours = () => {
+  return getSleepHours('monday') +
+         getSleepHours('tuesday') +
+         getSleepHours('wednesday') +
+         getSleepHours('thursday') +
+         getSleepHours('friday') +
+         getSleepHours('saturday') +
+         getSleepHours('sunday');
+};
+
+// Συνάρτηση για να επιστρέψει τις ιδανικές ώρες ύπνου για την εβδομάδα
+const getIdealSleepHours = (idealHoursPerNight) => {
+  return idealHoursPerNight * 7; // Ιδανικές ώρες ύπνου για την εβδομάδα
+};
+
+// Συνάρτηση για να υπολογίσει το χρέος ύπνου
+const calculateSleepDebt = () => {
+  const actualSleepHours = getActualSleepHours();
+  const idealSleepHours = getIdealSleepHours(2); // Αν θεωρούμε 8 ώρες ύπνου κάθε βράδυ
+
+  if (actualSleepHours === idealSleepHours) {
+    console.log('You got the perfect amount of sleep!');
+  } else if (actualSleepHours > idealSleepHours) {
+    console.log('You got more sleep than needed! You have ' + (actualSleepHours - idealSleepHours) + ' extra hours of sleep.');
+  } else {
+    console.log('You should get some rest! You need ' + (idealSleepHours - actualSleepHours) + ' more hours of sleep.');
+  }
+};
+
+// Ξεκίνημα του προγράμματος
+calculateSleepDebt();
